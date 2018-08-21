@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :images, only: [:create, :delete, :show]
+      resources :images, only: [:create, :delete, :show, :index]
       resources :users, only: [:create]
-      resources :boardimages, only [:create, :delete]
+      resources :board_images, only: [:create, :delete, :index]
     end
   end
 
