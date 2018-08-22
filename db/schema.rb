@@ -15,13 +15,6 @@ ActiveRecord::Schema.define(version: 2018_08_10_203827) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "board_images", force: :cascade do |t|
-    t.integer "board_id"
-    t.integer "image_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "boards", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
@@ -33,6 +26,13 @@ ActiveRecord::Schema.define(version: 2018_08_10_203827) do
     t.string "name"
     t.integer "ImgId"
     t.string "src"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer "board_id"
+    t.integer "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

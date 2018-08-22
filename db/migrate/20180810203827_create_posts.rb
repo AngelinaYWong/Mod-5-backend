@@ -1,6 +1,6 @@
-class CreateBoardImages < ActiveRecord::Migration[5.2]
+class CreatePosts < ActiveRecord::Migration[5.2]
   def change
-    create_table :board_images do |t|
+    create_table :posts do |t|
       t.integer :board_id
       t.integer :image_id
 

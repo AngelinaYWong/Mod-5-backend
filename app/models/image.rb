@@ -1,4 +1,4 @@
 class Image < ApplicationRecord
-  belongs_to :boardimages, optional: true
-  has_many :boards, through: :boardimages
+  belongs_to :posts, optional: true
+  has_many :boards, through: :posts
 end

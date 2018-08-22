@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :images, only: [:create, :delete, :show, :index]
       resources :users, only: [:create]
-      resources :board_images, only: [:create, :delete, :index]
+      resources :posts, only: [:create, :delete, :index]
     end
   end
 
