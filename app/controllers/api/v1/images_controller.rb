@@ -10,6 +10,13 @@ class Api::V1::ImagesController < ApplicationController
     render json: @images
   end
 
+  def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+    @images = Image.all
+    render json: @images
+  end
+
 
 
   private
